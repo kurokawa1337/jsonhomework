@@ -6,13 +6,11 @@ const regMsg = document.getElementById('register-msg');
 regForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Блокуємо кнопку та змінюємо текст
     const originalText = regBtn.textContent;
     regBtn.disabled = true;
     regBtn.textContent = 'Loading...';
     regMsg.textContent = '';
     
-    // Імітація запиту через Promise
     new Promise((resolve) => {
         setTimeout(() => {
             resolve('Реєстрація успішна!');
@@ -20,10 +18,9 @@ regForm.addEventListener('submit', (e) => {
     })
     .then((message) => {
         regMsg.textContent = message;
-        regForm.reset(); // Очищення форми після успіху
+        regForm.reset();
     })
     .finally(() => {
-        // Повертаємо кнопку в початковий стан
         regBtn.disabled = false;
         regBtn.textContent = originalText;
     });
@@ -121,8 +118,7 @@ function fetchRandomQuote() {
     const container = document.getElementById('quote-container');
     container.innerHTML = 'Завантаження...';
     
-    // ВАЖЛИВО: Для api-ninjas потрібен ключ. Встав свій API ключ сюди.
-    const apiKey = 'YOUR_API_NINJAS_KEY'; 
+    const apiKey = 'ILjT0fOOzGvrGUHAhCwIgLBi7OprzQXMxY40YW0N'; 
     
     fetch('https://api.api-ninjas.com/v1/quotes', {
         method: 'GET',
