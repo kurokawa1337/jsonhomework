@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Взаємодія із сервером</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Взаємодія із сервером</h1>
+
+        <div class="task-section">
+            <h2>Завдання 1: Поради за словом</h2>
+            <div class="input-group">
+                <input type="text" id="advice-keyword" placeholder="Введіть слово (напр. 'spiders')">
+                <button id="advice-btn">Знайти пораду</button>
+            </div>
+            <div id="advice-result" class="result-box"></div>
+        </div>
+
+        <div class="task-section">
+            <h2>Завдання 2: Список порід собак</h2>
+            <button id="dogs-btn">Завантажити породи</button>
+            <ul id="breed-list" class="result-box"></ul>
+        </div>
+
+        <div class="task-section">
+            <h2>Завдання 3: Випадкова цитата</h2>
+            <button id="quote-btn">Отримати цитату</button>
+            <div id="quote-container" class="result-box"></div>
+        </div>
+
+        <div class="task-section">
+            <h2>Завдання 4: Інформація про країну</h2>
+            <div class="input-group">
+                <input type="text" id="country-name" placeholder="Введіть назву (напр. 'Ukraine')">
+                <button id="country-btn">Знайти країну</button>
+            </div>
+            <div id="country-info" class="result-box"></div>
+        </div>
+        
+        <div class="task-section">
+            <h2>Завдання з реєстрацією (Promise)</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <input type="text" id="reg-name" placeholder="Ім'я" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="reg-email" placeholder="Email" required>
+                </div>
+                <button type="submit" id="register-btn">Зареєструватися</button>
+            </form>
+            <div id="register-msg"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
